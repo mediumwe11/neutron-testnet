@@ -65,10 +65,11 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 ```
-11.  Enable service and start your node:
+10  Enable service and start your node:
 ```
 sudo systemctl daemon-reload
 sudo systemctl enable neutrond
 sudo systemctl restart neutrond
 journalctl -u neutrond -f -o cat
 ```
+11. If you want to sync your full node quickly you can use state sync guide here: https://github.com/mediumwe11/neutron-testnet/blob/main/statesync.md
