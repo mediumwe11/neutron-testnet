@@ -50,7 +50,8 @@ sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.001untrn\"/;"
 ```
 9. Configure the background service:
 ```
-echo "[Unit]
+sudo tee /etc/systemd/system/neutrond.service > /dev/null <<EOF
+[Unit]
 Description=Neutrond Daemon
 After=network.target
 
